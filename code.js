@@ -12,3 +12,5 @@ function fibr(n, sum, old) {
 function fib(n) {
   return fibr(n, 1, 1);
 }
+
+module.exports = {fib};
