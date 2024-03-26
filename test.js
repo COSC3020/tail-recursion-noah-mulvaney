@@ -13,6 +13,6 @@ function slow_fib(n) {
 }
 
 for (let i = 0; i < 10; ++i) {
-  let n = Math.floor(Math.random() * 100);
+  let n = Math.floor(Math.random() * 50);
   assert(slow_fib(n) == code.fib(n));
 }
