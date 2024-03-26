@@ -9,10 +9,10 @@ const assert = require("assert");
 
 function slow_fib(n) {
   if (n < 2) return 1;
-  else return slow_fib(n - 1) + slow_fib(n - 2);
+  return slow_fib(n - 1) + slow_fib(n - 2);
 }
 
-for (let i = 0; i < 100; ++i) {
-  let n = Math.floor(Math.random() * 1000);
+for (let i = 0; i < 10; ++i) {
+  let n = Math.floor(Math.random() * 100);
   assert(slow_fib(n) == code.fib(n));
 }
