@@ -7,10 +7,12 @@
 const code = require("./code.js");
 const assert = require("assert");
 
-assert(code.fib(1) == 1);
-assert(code.fib(2) == 2);
-assert(code.fib(3) == 3);
-assert(code.fib(4) == 5);
-assert(code.fib(5) == 8);
-assert(code.fib(6) == 13);
-assert(code.fib(1) == 0); // Should fail
+function slow_fib(n) {
+  if (n < 2) return 1;
+  else return slow_fib(n - 1) + slow_fib(n - 2);
+}
+
+for (let i = 0; i < 100; ++i) {
+  let n = Math.floor(Math.random() * 1000);
+  assert(slow_fib(n) == code.fib(n));
+}
